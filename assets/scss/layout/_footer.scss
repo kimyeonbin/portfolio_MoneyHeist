@@ -1,0 +1,32 @@
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 44px;
+    width: 100%;
+    height: 140px;
+    color: #fff;
+    .logo{
+        position: absolute;
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Fjalla One', serif;
+        font-size: 57px;
+
+        @include mobile{
+            font-size: 8.2vw;
+        }
+    }
+    .msg{
+        font-size: 15px;
+        text-transform: uppercase;
+
+        @include mobile{
+            display: none;
+        }
+    }
+}

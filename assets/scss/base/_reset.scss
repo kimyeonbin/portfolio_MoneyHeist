@@ -1,0 +1,49 @@
+:root {-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%;text-size-adjust:100%;cursor:auto;overflow-wrap:break-word;word-break:break-word;tab-size:4}
+*{margin:0;padding:0;font:inherit;color:inherit;}
+*, :after, :before {box-sizing:border-box;flex-shrink:0;}
+html, body {height:100%;}
+ul{list-style: none;}
+img, picture, video, canvas, svg {display: block;max-width:100%;}
+button {background:none;border:0;cursor:pointer;}
+a {text-decoration:none}
+table {border-collapse:collapse;border-spacing:0}
+
+body{
+    width: 100vw;
+    font-family: 'Malgun Gothic', sans-serif;
+    font-weight: 350;
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: -1px;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    overflow: overlay;
+    overflow-x: hidden;
+    background: #000;
+    transition: background 0.3s;
+}
+/*scrollbar*/
+::-webkit-scrollbar {
+    background: transparent;
+    width: 10px;
+    mix-blend-mode: difference;
+}
+/*track*/
+::-webkit-scrollbar-track {
+    background: transparent;
+    position: fixed;
+    margin-right: 10px;
+}
+/*thumb*/
+::-webkit-scrollbar-thumb {
+    position: fixed;
+    border-width: 10px;
+    border-style: solid;
+    right: 10px;
+    border-radius: 100px;
+    color: #fff7f2;
+}
+::selection{
+    background: #cf0303;
+    color: #fff;
+}
