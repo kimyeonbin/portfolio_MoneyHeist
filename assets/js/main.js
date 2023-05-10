@@ -266,10 +266,10 @@ $(function(){
              * @가로스크롤_텍스트
              */
             const highlightTxt = new SplitType('.sc-highlight .headline', { types: 'words, chars' });
-            gsap.set('.sc-highlight .h-overlay',{opacity:0})
-            gsap.set('.sc-highlight img',{scale:1.2})
-            gsap.set('.sc-highlight .headline',{xPercent:80})
-            gsap.set(highlightTxt.chars,{opacity:0,yPercent:25})
+            gsap.set('.sc-highlight .h-overlay',{opacity:0});
+            gsap.set('.sc-highlight img',{scale:1.2});
+            gsap.set('.sc-highlight .headline',{xPercent:80});
+            gsap.set(highlightTxt.chars,{opacity:0,yPercent:25});
 
             highlightTxtHori = gsap.timeline({
                 scrollTrigger:{
@@ -285,7 +285,7 @@ $(function(){
             .addLabel('a')
             .to('.sc-highlight img',{scale:1},'a')
             .to('.sc-highlight .h-overlay',{opacity:1},'a')
-            .to('.sc-highlight .headline',{xPercent:-60},'a')
+            .to('.sc-highlight .headline',{xPercent:-60},'a');
 
             gsap.to('.sc-highlight .headline .char',{
                 scrollTrigger:{
@@ -312,7 +312,7 @@ $(function(){
             showText
             .addLabel('a')
             .fromTo('.sc-collage .left',{x:-250,},{x:0, opacity:1,},'a')
-            .fromTo('.sc-collage .right',{x:250,}, {x:0, opacity:1,},'a')
+            .fromTo('.sc-collage .right',{x:250,}, {x:0, opacity:1,},'a');
             /**
              * @헤더_색상
              */
