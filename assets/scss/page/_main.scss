@@ -26,7 +26,6 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 50px;
-        width: auto;
         text-align: center;
         font-size: 75px;
         letter-spacing: -1.5px;
@@ -132,7 +131,6 @@
             }
             @include mobile{
                 font-size: 19px;
-                // font-weight: 400;
             }
         }
     }
@@ -151,39 +149,33 @@
     .s-grid{
         position: relative;
         display: grid;
+        grid-template-columns: repeat(3, 1fr);
         grid-auto-columns: 1fr;
-        grid-column-gap: 5vw;
-        grid-row-gap: 3vw;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
+        grid-gap: 5vw 3vw;
 
         @include tablet{
-            grid-column-gap: 0;
-            grid-row-gap: 6vw;
+            grid-gap: 0 6vw;
         }
     }
     .img-box{
         overflow: hidden;
         width: 100%;
         background: #f00;
+
         &.sc-1{
             width: 30vw;
             height: 30vw;
         
-            grid-column-end: 3;
-            grid-column-start: 1;
-            grid-row-end: 2;
-            grid-row-start: 1;
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
             align-self: center;
         }
         &.sc-2{
             width: 50vw;
             height: 50vw;
         
-            grid-column-end: 4;
-            grid-column-start: 2;
-            grid-row-end: 2;
-            grid-row-start: 1;
+            grid-column: 2 / 4;
+            grid-row: 1 / 2;
             justify-self: center;
             align-self: center;
 
@@ -192,15 +184,13 @@
             }
         }
         &.sc-3{
-            height: 22vw;
             width: 35vw;
+            height: 22vw;
         
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
             justify-self: center;
             align-self: end;
-            grid-row-start: 1;
-            grid-row-end: 3;
-            grid-column-start: 1;
-            grid-column-end: 3;
             z-index: 1;
         }
         &.sc-4{
@@ -212,10 +202,8 @@
         
             justify-self: end;
             align-self: center;
-            grid-row-start: 2;
-            grid-row-end: 4;
-            grid-column-start: 2;
-            grid-column-end: 4;
+            grid-row: 2 / 4;
+            grid-column: 2 / 4;
 
             @include tablet{
                 right: -8vw;
@@ -229,10 +217,8 @@
         
             justify-self: start;
             align-self: center;
-            grid-column-start: 1;
-            grid-column-end: 3;
-            grid-row-start: 3;
-            grid-row-end: 6;
+            grid-column: 1 / 3;
+            grid-row: 3 / 6;
 
             @include tablet{
                 left: 0;
@@ -246,10 +232,8 @@
         
             justify-self: end;
             align-self: center;
-            grid-column-end: 4;
-            grid-column-start: 2;
-            grid-row-end: 5;
-            grid-row-start: 4;
+            grid-column: 2 / 4;
+            grid-row: 4 / 5;
 
             @include tablet{
                 left: 0;
@@ -262,10 +246,8 @@
         
             justify-self: center;
             align-self: end;
-            grid-column-end: 4;
-            grid-column-start: 2;
-            grid-row-end: 7;
-            grid-row-start: 4;
+            grid-column: 2 / 4;
+            grid-row: 4 / 7;
             z-index: 1;
 
             @include tablet{
@@ -309,10 +291,7 @@
         box-shadow: inset 0 -10px 10px -5px #000;
 
         @include mobile{
-            padding-top: 0;
-            padding-bottom: 170px;
-            padding-left: 7vw;
-            padding-right: 7vw;
+            padding: 0 7vw 170px;
         }
     }
     .plot-box{
@@ -329,7 +308,6 @@
         }
         @include mobile{
             font-size: 19px;
-            // font-weight: 400;
         }
         svg{
             position: absolute;
@@ -359,6 +337,7 @@
     padding-right: 0;
     padding-left: 0;
     font-family: 'Dahlia Condensed', serif;
+
     .h-sticky{
         display: flex;
         align-items: center;
@@ -366,6 +345,7 @@
         top: 0;
         height: 100vh;
         overflow: hidden;
+
         .headline{
             position: relative;
             font-size: 15vw;
@@ -447,7 +427,6 @@
         }
         @include mobile{
             font-size: 19px;
-            // font-weight: 400;
             left: 60px;
         }
     }
@@ -481,25 +460,20 @@
     }
     .a-grid{
         display: grid;
-        grid-auto-columns: 1fr;
-        grid-column-gap: 96px;
-        grid-row-gap: 96px;
         grid-template-columns: 33vw 1fr;
-        grid-template-rows: auto;
+        grid-auto-columns: 1fr;
+        grid-gap: 96px;
 
         @include desktop{
             grid-column-gap: 50px;
         }
         @include tablet{
-            grid-column-gap: 24px;
-            grid-row-gap: 48px;
             grid-template-columns: 1fr;
+            grid-gap: 24px / 48px;
         }
         .text-box{
-            grid-column-start: span 1;
-            grid-column-end: span 1;
-            grid-row-start: span 1;
-            grid-row-end: span 1;
+            grid-column: span 1;
+            grid-row: span 1;
             justify-self: center;
             align-self: start;
         
@@ -517,7 +491,6 @@
             }
             @include mobile{
                 font-size: 19px;
-                // font-weight: 400;
             }
         }
         .img-box{
@@ -525,10 +498,8 @@
             width: 100%;
             height: 40vw;
             &.a-1{
-                grid-column-start: 1;
-                grid-column-end: 2;
-                grid-row-start: 1;
-                grid-row-end: 3;
+                grid-column: 1 / 2;
+                grid-row: 1 / 3;
                 
                 @include desktop{
                     margin-left: -30px;
@@ -540,11 +511,9 @@
             }
             &.a-2{
                 justify-self: start;
-                grid-column-start: span 1;
-                grid-column-end: span 1;
-                grid-row-start: span 2;
-                grid-row-end: span 2;
                 align-self: start;
+                grid-column: span 1;
+                grid-row: span 2;
             
                 width: 46vw;
                 height: 50vw;
@@ -556,8 +525,7 @@
                 }
                 @include tablet{
                     grid-column-start: 1;
-                    grid-row-end: 6;
-                    grid-row-start: 4;
+                    grid-row: 4 / 6;
                 }
             }
             &.a-3{
@@ -567,8 +535,7 @@
 
                 @include tablet{
                     grid-column-start: 1;
-                    grid-row-end: 7;
-                    grid-row-start: 5;
+                    grid-row: 5 / 7;
                     justify-self: end;
                     width: 40vw;
                     height: 42vw;
@@ -606,14 +573,12 @@
     }
     .cast-grid{
         display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-columns: 1fr;
+        grid-gap: 144px;
         max-width: 1200px;
         margin: 0 auto;
         margin-bottom: 200px;
-        grid-auto-columns: 1fr;
-        grid-column-gap: 144px;
-        grid-row-gap: 144px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
         
         @include desktop{
             grid-column-gap: 80px;
@@ -622,9 +587,9 @@
             grid-column-gap: 55px;
         }
         @include mobile{
+            grid-template-columns: 1fr;
             margin-bottom: 96px;
             grid-row-gap: 48px;
-            grid-template-columns: 1fr;
             width: auto;
         }
         .cast-wrap{
@@ -650,52 +615,38 @@
                 flex-wrap: wrap;
             }
             &.c-1{
-                grid-column-start: span 1;
-                grid-column-end: span 1;
-                grid-row-start: span 1;
-                grid-row-end: span 1;
+                grid-column: span 1;
+                grid-row: span 1;
                 align-self: center;
             }
             &.c-2{
-                grid-column-start: span 1;
-                grid-column-end: span 1;
-                grid-row-start: span 2;
-                grid-row-end: span 2;
+                grid-column: span 1;
+                grid-row: span 2;
                 align-self: center;
             }
             &.c-3{
-                grid-column-start: span 1;
-                grid-column-end: span 1;
-                grid-row-start: span 2;
-                grid-row-end: span 2;
+                grid-column: span 1;
+                grid-row: span 2;
                 align-self: center;
             }
             &.c-4{
-                grid-column-start: span 1;
-                grid-column-end: span 1;
-                grid-row-start: span 2;
-                grid-row-end: span 2;
+                grid-column: span 1;
+                grid-row: span 2;
                 align-self: center;
             }
             &.c-5{
-                grid-column-start: span 1;
-                grid-column-end: span 1;
-                grid-row-start: span 2;
-                grid-row-end: span 2;
+                grid-column: span 1;
+                grid-row: span 2;
                 align-self: center;
             }
             &.c-6{
-                grid-column-start: span 1;
-                grid-column-end: span 1;
-                grid-row-start: span 2;
-                grid-row-end: span 2;
+                grid-column: span 1;
+                grid-row: span 2;
                 align-self: center;
             }
             &.c-7{
-                grid-column-start: span 1;
-                grid-column-end: span 1;
-                grid-row-start: span 2;
-                grid-row-end: span 2;
+                grid-column: span 1;
+                grid-row: span 2;
                 align-self: center;
             }
         }
@@ -728,10 +679,9 @@
             display: flex;
             flex-direction: row;
             justify-content: center;
-            flex-wrap: wrap;
             align-items: flex-start;
-            grid-column-gap: 32px;
-            grid-row-gap: 16px;
+            grid-gap: 32px 16px;
+            flex-wrap: wrap;
             
             @include tablet{
                 flex-direction: column;
@@ -752,6 +702,7 @@
                 .cast-role{
                     margin-top: 0;
                     margin-bottom: 11px;
+
                     @include mobile{
                         margin-bottom: 6px;
                     }
@@ -794,11 +745,8 @@
     .info-grid{
         display: grid;
         margin-top: 48px;
+        grid-template-columns: repeat(2, 1fr);
         grid-auto-columns: 1fr;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
 
         @include desktop{
             grid-template-columns: 1fr auto;
@@ -809,10 +757,8 @@
             margin-top: 24px;
         }
         .img-box{
-            grid-column-start: span 1;
-            grid-column-end: span 1;
-            grid-row-start: span 1;
-            grid-row-end: span 1;
+            grid-column: span 1;
+            grid-row: span 1;
 
             overflow: hidden;
             width: 100%;
@@ -823,26 +769,24 @@
             }
         }
         .info-area2{
-            grid-column-start: span 1;
-            grid-column-end: span 1;
-            grid-row-start: span 1;
-            grid-row-end: span 1;
+            grid-column: span 1;
+            grid-row: span 1;
             justify-self: center;
         
             display: flex;
-            padding: 50px 90px;
             flex-direction: column;
             justify-content: space-between;
+            padding: 50px 90px;
 
             @include desktop{
                 padding: 0 70px;
             }
             @include tablet{
                 padding: 50px 0 50px;
-                gap: 18px;
+                grid-gap: 18px;
             }
             @include mobile{
-                gap: 15px;
+                grid-gap: 15px;
             }
             .info-box{
                 display: flex;
@@ -929,61 +873,47 @@
         }
     }
     .col-grid{
-        display: grid;
         position: absolute;
+        display: grid;
         top: -33vh;
         width: 320vh;
         height: 100%;
         grid-auto-columns: 1fr;
-        grid-column-gap: 3vh;
-        grid-row-gap: 3vh;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto;
+        grid-gap: 3vh;
+        grid-template-columns: repeat(6, 1fr);
+
         .img-box{
             overflow: hidden;
             width: 100%;
             height: 55vh;
+
             &.col-1{
-                grid-column-start: 2;
-                grid-column-end: 4;
-                grid-row-start: 1;
-                grid-row-end: 2;
+                grid-column: 2 / 4;
+                grid-row: 1 / 2;
             }
             &.col-2{
-                grid-column-start: 4;
-                grid-column-end: 6;
-                grid-row-start: 1;
-                grid-row-end: 2;
+                grid-column: 4 / 6;
+                grid-row: 1 / 2;
             }
             &.col-3{
-                grid-column-start: span 2;
-                grid-column-end: span 2;
-                grid-row-start: span 1;
-                grid-row-end: span 1;
+                grid-column: span 2;
+                grid-row: span 1;
             }
             &.col-4{
-                grid-column-start: span 2;
-                grid-column-end: span 2;
-                grid-row-start: span 1;
-                grid-row-end: span 1;
+                grid-column: span 2;
+                grid-row: span 1;
             }
             &.col-5{
-                grid-column-start: span 2;
-                grid-column-end: span 2;
-                grid-row-start: span 1;
-                grid-row-end: span 1;
+                grid-column: span 2;
+                grid-row: span 1;
             }
             &.col-6{
-                grid-column-start: 2;
-                grid-column-end: 4;
-                grid-row-start: 3;
-                grid-row-end: 4;
+                grid-column: 2 / 4;
+                grid-row: 3 / 4;
             }
             &.col-7{
-                grid-column-start: span 2;
-                grid-column-end: span 2;
-                grid-row-start: span 1;
-                grid-row-end: span 1;
+                grid-column: span 2;
+                grid-row: span 1;
             }
         }
     }
@@ -1004,8 +934,6 @@
             left: 50%;
             bottom: 30%;
             transform: translateX(-50%);
-        }
-        @include mobile{
         }
     }
 }
