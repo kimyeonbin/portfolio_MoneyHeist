@@ -69,10 +69,6 @@
         }
         .link-go-bg{
             height: 100%;
-
-            @include mobile{
-                display: none;
-            }
         }
     }
     .link-go-bg{
@@ -86,8 +82,7 @@
         background: #fff;
 
         @include mobile{
-            transition: none;
-            background: none;
+            display: none;
         }
     }
 }
