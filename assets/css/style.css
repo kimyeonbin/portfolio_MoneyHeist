@@ -538,7 +538,6 @@ body {
 .sc-scene .img-box {
   overflow: hidden;
   width: 100%;
-  background: #f00;
 }
 .sc-scene .img-box.sc-1 {
   width: 30vw;
