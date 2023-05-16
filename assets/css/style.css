@@ -204,7 +204,7 @@ body {
 }
 @media (max-width: 767px) {
   .link-go:hover {
-    color: inherit;
+    color: #fff7f2;
   }
 }
 .link-go:hover .link-go-bg {
