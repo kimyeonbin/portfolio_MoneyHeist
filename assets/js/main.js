@@ -9,7 +9,7 @@ $(function(){
             /**
              * @헤더로고_위치크기
              */
-             gsap.from('.header .logo',{
+            gsap.from('.header .logo',{
                 scrollTrigger:{
                     trigger:'.sc-visual',
                     start:'0% 0%',
@@ -20,10 +20,10 @@ $(function(){
                 scale:4.5,
                 top: '75vh'
             });
-             /** 
+            /** 
              * @헤더푸터레이아웃_사라짐나타남
              */
-             const hideLayout = gsap.timeline({
+            const hideLayout = gsap.timeline({
                 scrollTrigger:{
                     trigger:'.sc-collage',
                     start:'0% 50%',
@@ -92,10 +92,10 @@ $(function(){
                 scale:3.5,
                 top: '75vh'
             });
-             /** 
+            /** 
              * @헤더푸터레이아웃_사라짐나타남
              */
-             const hideLayout = gsap.timeline({
+            const hideLayout = gsap.timeline({
                 scrollTrigger:{
                     trigger:'.sc-collage',
                     start:'0% 50%',
