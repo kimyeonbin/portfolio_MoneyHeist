@@ -55,19 +55,19 @@ body{
     transition: background 0.3s;
 }
 /*scrollbar*/
-::-webkit-scrollbar {
+::-webkit-scrollbar{
     background: transparent;
     width: 10px;
     mix-blend-mode: difference;
 }
 /*track*/
-::-webkit-scrollbar-track {
+::-webkit-scrollbar-track{
     background: transparent;
     position: fixed;
     margin-right: 10px;
 }
 /*thumb*/
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb{
     position: fixed;
     border-width: 10px;
     border-style: solid;
