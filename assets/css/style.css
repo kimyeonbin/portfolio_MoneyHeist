@@ -210,6 +210,11 @@ body {
 .link-go:hover .link-go-bg {
   height: 100%;
 }
+@media (max-width: 767px) {
+  .link-go:hover .link-go-bg {
+    height: 0;
+  }
+}
 .link-go .link-go-bg {
   position: absolute;
   bottom: 0;
@@ -220,10 +225,11 @@ body {
   transition: height 0.4s;
   z-index: -1;
   background: #fff;
+  opacity: 1;
 }
 @media (max-width: 767px) {
   .link-go .link-go-bg {
-    display: none;
+    opacity: 0;
   }
 }
 

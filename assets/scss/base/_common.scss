@@ -69,6 +69,10 @@
         }
         .link-go-bg{
             height: 100%;
+
+            @include mobile{
+                height: 0;
+            }
         }
     }
     .link-go-bg{
@@ -80,9 +84,10 @@
         transition: height .4s;
         z-index: -1;
         background: #fff;
+        opacity: 1;
 
         @include mobile{
-            display: none;
+            opacity: 0;
         }
     }
 }
