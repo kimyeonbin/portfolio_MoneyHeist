@@ -296,7 +296,6 @@ $(function(){
                 },
                 opacity:1, yPercent:0, stagger:0.05
             });
-
             /**
              * @하단텍스트_좌우나타남
              */
@@ -342,7 +341,6 @@ $(function(){
                     height:heightVal
                 });
             });
-
             /**
              * @영역_상하움직임
              */
