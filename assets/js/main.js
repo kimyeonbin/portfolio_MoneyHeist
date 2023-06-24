@@ -209,7 +209,7 @@ $(function(){
         },
         "all": function() {
             // 가로스크롤_텍스트
-            const highlightTxt = new SplitType('.sc-highlight .headline', {types: 'words, chars'});
+            const highlightTxt = new SplitType('.sc-highlight .headline', {types: 'chars'});
             gsap.set('.sc-highlight .h-overlay', {opacity: 0});
             gsap.set('.sc-highlight img', {scale: 1.2});
             gsap.set('.sc-highlight .headline', {xPercent: 80});
