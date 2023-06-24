@@ -73,21 +73,6 @@ table {
   border-spacing: 0;
 }
 
-body {
-  font-family: "Malgun Gothic", sans-serif;
-  font-weight: 350;
-  font-size: 15px;
-  line-height: 1.6;
-  letter-spacing: -1px;
-  -webkit-font-smoothing: antialiased;
-  color: #fff;
-  overflow: overlay;
-  overflow-x: hidden;
-  background: #000;
-  -webkit-transition: background 0.3s;
-  transition: background 0.3s;
-}
-
 /*scrollbar*/
 ::-webkit-scrollbar {
   background: transparent;
@@ -119,6 +104,20 @@ body {
 ::selection {
   background: #cf0303;
   color: #fff;
+}
+
+body {
+  font-family: "Malgun Gothic", sans-serif;
+  font-weight: 350;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: -1px;
+  color: #fff;
+  overflow: overlay;
+  overflow-x: hidden;
+  background: #000;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .blind {
