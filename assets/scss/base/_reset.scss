@@ -38,18 +38,15 @@ table{
     border-collapse: collapse;
     border-spacing: 0;
 }
-/*scrollbar*/
 ::-webkit-scrollbar{
     background: transparent;
     width: 10px;
 }
-/*track*/
 ::-webkit-scrollbar-track{
     background: transparent;
     position: fixed;
     margin-right: 10px;
 }
-/*thumb*/
 ::-webkit-scrollbar-thumb{
     position: fixed;
     border-width: 10px;
